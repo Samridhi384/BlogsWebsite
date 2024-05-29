@@ -12,15 +12,15 @@ jobs:
 
     strategy:
       matrix:
-        node-version: ["20.10.0"]
+        node-version: ["20.x"]
 
     services:
       mongodb:
-        image: mongo
+        image: mongo:5.0
         ports:
           - 27017:27017
       redis:
-        image: redis
+        image: redis:6.2
         ports:
           - 6379:6379
 
